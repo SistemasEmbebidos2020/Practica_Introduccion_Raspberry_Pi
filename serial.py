@@ -6,14 +6,11 @@ import var
 import pio
 import cpu
 import Ports
+from time import sleep
 
 def peripheral_setup () :
  pio.cpu=cpu.CPU ()
  pio.uart=Ports.UART ()
-
-def peripheral_loop () :
- pass
-
 
 def variables_setup () :
  var.Name = ''
@@ -23,9 +20,7 @@ def chart_SETUP () :
  pio.uart.print ("Whats your name? ")
  var.Name = pio.uart.input (True)
  pio.uart.println ("Hello "+var.Name)
- return
-
-def chart_LOOP () :
+ sleep(0.2)
  return
 
 # Main function
@@ -33,11 +28,10 @@ def main () :
 # Setup
  variables_setup ()
  peripheral_setup ()
- chart_SETUP ()
 # Infinite loop
  while True :
-  peripheral_loop ()
-  chart_LOOP ()
+  chart_SETUP ()
+  pass
 # Command line execution
 if __name__ == '__main__' :
    main()
