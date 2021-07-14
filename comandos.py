@@ -3,8 +3,6 @@
 
 import subprocess
 import sys
-import os
-import nano 
 
 #subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'ubidots'])
 #subprocess.check_call([sys.executable, '-m', 'pip', 'install', '--upgrade','pip'])
