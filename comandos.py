@@ -15,6 +15,9 @@ def main():
  subprocess.call(['pwd'], shell=False)
  subprocess.call(['touch', 'prueba1.py'])
  subprocess.call(['ls'], shell=False)
+ #subprocess.call(['od','-c', 'prueba1.py'], shell=False)
+ #subprocess.call(['mkdir','holi'], shell=False)
+ 
  while(True):
   loop()
 
