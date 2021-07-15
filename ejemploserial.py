@@ -8,7 +8,7 @@ from wiringpi import Serial
 baud = 115200
 ser  = Serial("/dev/serial0",baud)
 sleep(0.3)
-nomina = ["tonny","andrea","laura","andres"]
+nomina = ["tonny","alisson","christopher","victor"]
 clave = ["1234","2345","3456","4567"]
 
 def verificacion(Name):
