@@ -24,7 +24,7 @@ def main () :
   peripheral_loop()
   pass
 
-# Command line execution
+# Command line execution #asumir sera llamado desde la consola, no desde otro archivo py
 if __name__ == '__main__' :
    main()
 
