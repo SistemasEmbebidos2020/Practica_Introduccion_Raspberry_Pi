@@ -25,6 +25,7 @@ def peripheral_setup():
 
 def peripheral_loop():
  print("hola mundo")
+ sleep(2)
  
 # Main function
 def main () :
