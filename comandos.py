@@ -12,11 +12,12 @@ def loop():
 def main():
  
  subprocess.call(['ls', '/'])
- subprocess.call(['pwd'], shell=False)
- subprocess.call(['touch', 'prueba1.py'])
+ subprocess.call(['pwd'], shell=False) #imprimir ruta actual
+ subprocess.call(['touch', 'prueba1.py']) #crear fichero
  subprocess.call(['ls'], shell=False)
- #subprocess.call(['od','-c', 'prueba1.py'], shell=False)
+ #subprocess.call(['od','-c', 'prueba1.py'], shell=False) #leer fichero
  #subprocess.call(['mkdir','holi'], shell=False)
+ #subprocess.call(['python', 'prueba1.py'], shell=False) #leer fichero
  
  while(True):
   loop()
