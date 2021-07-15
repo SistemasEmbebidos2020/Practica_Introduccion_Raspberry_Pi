@@ -3,9 +3,9 @@ from time import sleep
 
 def peripheral_setup():
  GPIO.setmode(GPIO.BCM) #puede cambiar a BOARD
+ global led1
  led1 = 4  #si cambiar de BCM a Board defina el número del pin acorde a los pines de la raspberry
  GPIO.setup(led1, GPIO.OUT)
- Global led1
  
 def peripheral_loop():
  GPIO.output(led1,True)
