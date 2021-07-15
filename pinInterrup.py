@@ -45,7 +45,7 @@ def main () :
   mysleep(5)
   print ("mnmnma")
   mysleep(5)
-  print ("timepo")
+  print ("tiempo")
   mysleep(5)
   pass
   pass
