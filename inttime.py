@@ -1,7 +1,7 @@
 
 import RPi.GPIO as GPIO
 from time import sleep
-import threading
+from threading import *
 
 led1 = 4
 led2 = 17
@@ -10,18 +10,18 @@ bt2 = 6
 
 def int1():
  GPIO.output(led1,not(GPIO.input(led1)))
- threading.Timer(2,int1).start()
+ Timer(2,int1).start()
  
 def int2():
  GPIO.output(led2,not(GPIO.input(led2)))
- threading.Timer(4,int2).start()
+ Timer(4,int2).start()
  
 def peripheral_setup():
  GPIO.setmode(GPIO.BCM)
  GPIO.setup(led1, GPIO.OUT)
  GPIO.setup(led2, GPIO.OUT)
- threading.Timer(2,int1).start()
- threading.Timer(4,int2).start()
+ Timer(2,int1).start()
+ Timer(4,int2).start()
 
 def peripheral_loop():
  print("hola mundo")
