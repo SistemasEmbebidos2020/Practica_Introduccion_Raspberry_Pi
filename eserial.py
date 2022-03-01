@@ -24,3 +24,4 @@ def printsln(menss):
 def prints(menss):
  ser.puts(menss)
  sleep(0.2)
+ 
