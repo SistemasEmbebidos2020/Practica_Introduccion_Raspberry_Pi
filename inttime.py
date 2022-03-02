@@ -1,6 +1,6 @@
 
 import RPi.GPIO as GPIO
-from time import sleep
+from delay import *
 from threading import *
 
 led1 = 4
@@ -25,7 +25,7 @@ def peripheral_setup():
 
 def peripheral_loop():
  print("hola mundo")
- sleep(2)
+ delay(2)
  
 # Main function
 def main () :
