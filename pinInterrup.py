@@ -1,6 +1,6 @@
 
 import RPi.GPIO as GPIO
-from time import*
+from delay import*
 
 led1 = 4
 led2 = 17
@@ -23,12 +23,6 @@ def peripheral_setup():
  GPIO.add_event_detect(bt1,GPIO.FALLING,callback=my_callback1,bouncetime=300)
  GPIO.add_event_detect(bt2,GPIO.RISING,callback=my_callback2,bouncetime=300)
 
-def mysleep(delay): 
- start = time() 
- while time()-start < delay:
-  pass
-
-
 def peripheral_loop():
  pass
  
@@ -42,14 +36,13 @@ def main () :
  while 1 :
   peripheral_loop()
   print ("hola")
-  mysleep(5)
+  delay(5)
   print ("mnmnma")
-  mysleep(5)
+  delay(5)
   print ("tiempo")
-  mysleep(5)
+  delay(5)
   pass
-  pass
-
+ 
 # Command line execution
 if __name__ == '__main__' :
    main()
