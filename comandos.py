@@ -13,7 +13,7 @@ def main():
  subprocess.call(['pwd'], shell=False) #imprimir ruta actual
  subprocess.call(['touch', 'prueba1.py']) #crear fichero
  subprocess.call(['ls'], shell=False)
- #subprocess.call(['od','-c', 'prueba1.py'], shell=False) #leer fichero
+ #subprocess.call(['cat', 'prueba1.py'], shell=False) #leer fichero
  #subprocess.call(['mkdir','leds'], shell=False)
  #subprocess.call(['python', 'prueba1.py'], shell=False) #leer fichero
 
