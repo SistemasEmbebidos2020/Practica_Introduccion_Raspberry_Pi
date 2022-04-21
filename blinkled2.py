@@ -1,6 +1,7 @@
 
 import RPi.GPIO as GPIO
 from time import sleep
+GPIO.setwarnings(False)
 
 led1 = 4
 led2 = 17
@@ -27,15 +28,18 @@ def peripheral_loop():
  
 # Main function
 def main () :
-
-# Setup
+ 
+ # Setup
  peripheral_setup()
-
-# Infinite loop
- while 1 :
-  peripheral_loop()
-  pass
-
+ try:
+ # Infinite loop
+  while 1 :
+   peripheral_loop()
+ except:
+  print()
+  print("bye")
+  GPIO.cleanup()
+ 
 # Command line execution
 if __name__ == '__main__' :
    main()
