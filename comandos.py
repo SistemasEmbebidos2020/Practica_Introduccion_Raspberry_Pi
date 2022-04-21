@@ -6,8 +6,6 @@ import sys
 
 #subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'ubidots'])
 #subprocess.check_call([sys.executable, '-m', 'pip', 'install', '--upgrade','pip'])
-def loop():
- pass
 
 def main():
  
@@ -18,9 +16,7 @@ def main():
  #subprocess.call(['od','-c', 'prueba1.py'], shell=False) #leer fichero
  #subprocess.call(['mkdir','holi'], shell=False)
  #subprocess.call(['python', 'prueba1.py'], shell=False) #leer fichero
- 
- while(True):
-  loop()
+
 
 if  __name__ ==  '__main__':
  main()
