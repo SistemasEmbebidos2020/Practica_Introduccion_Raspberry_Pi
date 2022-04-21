@@ -22,25 +22,21 @@ def peripheral_setup():
  GPIO.setup(bt2, GPIO.IN, GPIO.PUD_UP)
  GPIO.add_event_detect(bt1,GPIO.FALLING,callback=my_callback1,bouncetime=300)
  GPIO.add_event_detect(bt2,GPIO.RISING,callback=my_callback2,bouncetime=300)
-
-def peripheral_loop():
- pass
  
 # Main function
 def main () :
-
 # Setup
  peripheral_setup()
 try:
 # Infinite loop
-  while 1 :
-   peripheral_loop()
-   print ("hola")
-   delay(5)
-   print ("mnmnma")
-   delay(5)
-   print ("tiempo")
-   delay(5)
+ while 1 :
+  peripheral_loop()
+  print ("Mientras lees")
+  delay(1.5)
+  print ("puedes presionar")
+  delay(1.5)
+  print ("los botones que quieras")
+  delay(1.5)
 except:
  print()
  print("Bye")
