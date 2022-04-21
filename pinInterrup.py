@@ -2,15 +2,15 @@
 import RPi.GPIO as GPIO
 from delay import*
 
-led1 = 4
-led2 = 17
-bt1 = 5
-bt2 = 6
+led1 = 2
+led2 = 3
+bt1 = 14
+bt2 = 15
 
-def my_callback1():
+def my_callback1(self):
  GPIO.output(led1,not(GPIO.input(led1)))
 
-def my_callback2():
+def my_callback2(self):
  GPIO.output(led2,not(GPIO.input(led2)))
 
  
@@ -31,18 +31,20 @@ def main () :
 
 # Setup
  peripheral_setup()
-
+try:
 # Infinite loop
- while 1 :
-  peripheral_loop()
-  print ("hola")
-  delay(5)
-  print ("mnmnma")
-  delay(5)
-  print ("tiempo")
-  delay(5)
-  pass
- 
+  while 1 :
+   peripheral_loop()
+   print ("hola")
+   delay(5)
+   print ("mnmnma")
+   delay(5)
+   print ("tiempo")
+   delay(5)
+except:
+ print()
+ print("Bye")
+ GPIO.cleanup()
 # Command line execution
 if __name__ == '__main__' :
    main()
