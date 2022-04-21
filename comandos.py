@@ -14,7 +14,7 @@ def main():
  subprocess.call(['touch', 'prueba1.py']) #crear fichero
  subprocess.call(['ls'], shell=False)
  #subprocess.call(['od','-c', 'prueba1.py'], shell=False) #leer fichero
- #subprocess.call(['mkdir','holi'], shell=False)
+ #subprocess.call(['mkdir','leds'], shell=False)
  #subprocess.call(['python', 'prueba1.py'], shell=False) #leer fichero
 
 
