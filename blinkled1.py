@@ -2,6 +2,7 @@
 
 import RPi.GPIO as GPIO
 from time import sleep
+GPIO.setwarnings(False)
 
 def peripheral_setup():
  GPIO.setmode(GPIO.BCM) #puede cambiar a BOARD
@@ -20,12 +21,15 @@ def main () :
 
 # Setup
  peripheral_setup()
-
+try:
 # Infinite loop
- while 1 :
-  peripheral_loop()
-  pass
-
+  while 1 :
+   peripheral_loop()
+except:
+ print()
+ print("bye")
+ GPIO.cleanup()
+ 
 # Command line execution #asumir sera llamado desde la consola, no desde otro archivo py
 if __name__ == '__main__' :
    main()
