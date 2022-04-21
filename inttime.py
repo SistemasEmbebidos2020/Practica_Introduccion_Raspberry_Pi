@@ -3,10 +3,12 @@ import RPi.GPIO as GPIO
 from delay import *
 from threading import *
 
-led1 = 4
-led2 = 17
-bt1 = 5
-bt2 = 6
+GPIO.setwarnings(False)
+
+led1 = 2
+led2 = 3
+bt1 = 14
+bt2 = 15
 
 def int1():
  GPIO.output(led1,not(GPIO.input(led1)))
@@ -34,12 +36,14 @@ def main () :
  print("hola mundosssssssssssss")
 
  peripheral_setup()
-
+ try:
 # Infinite loop
- while 1 :
-  peripheral_loop()
-  pass
-
+  while 1 :
+   peripheral_loop()
+ except:
+  print()
+  print("Bye")
+  GPIO.cleaup()
 # Command line execution
 if __name__ == '__main__' :
    main()
