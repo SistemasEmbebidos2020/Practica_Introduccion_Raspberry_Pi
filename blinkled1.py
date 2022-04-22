@@ -21,14 +21,14 @@ def main () :
 
 # Setup
  peripheral_setup()
-try:
+ try:
 # Infinite loop
   while 1 :
    peripheral_loop()
-except:
- print()
- print("bye")
- GPIO.cleanup()
+ except:
+  print()
+  print("bye")
+  GPIO.cleanup()
  
 # Command line execution #asumir sera llamado desde la consola, no desde otro archivo py
 if __name__ == '__main__' :
