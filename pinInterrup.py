@@ -2,8 +2,8 @@
 import RPi.GPIO as GPIO
 from delay import*
 
-led1 = 2
-led2 = 3
+led1 = 17
+led2 = 27
 bt1 = 14
 bt2 = 15
 
