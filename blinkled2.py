@@ -3,10 +3,10 @@ import RPi.GPIO as GPIO
 from time import sleep
 GPIO.setwarnings(False)
 
-led1 = 4
-led2 = 17
-bt1 = 5
-bt2 = 6
+led1 = 2
+led2 = 3
+bt1 = 14
+bt2 = 15
 
 def peripheral_setup():
  GPIO.setmode(GPIO.BCM)
