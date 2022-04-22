@@ -7,7 +7,7 @@ GPIO.setwarnings(False)
 def peripheral_setup():
  GPIO.setmode(GPIO.BCM) #puede cambiar a BOARD
  global led1
- led1 = 2  #si cambiar de BCM a Board defina el número del pin acorde a los pines de la raspberry
+ led1 = 17  #si cambiar de BCM a Board defina el número del pin acorde a los pines de la raspberry
  GPIO.setup(led1, GPIO.OUT)
  
 def peripheral_loop():
@@ -25,7 +25,7 @@ def main () :
 # Infinite loop
   while 1 :
    peripheral_loop()
- except:
+ except(KeyboardInterrupt):
   print()
   print("bye")
   GPIO.cleanup()
