@@ -3,8 +3,8 @@ import RPi.GPIO as GPIO
 from time import sleep
 GPIO.setwarnings(False)
 
-led1 = 2
-led2 = 3
+led1 = 17
+led2 = 27
 bt1 = 14
 bt2 = 15
 
