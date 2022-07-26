@@ -1,49 +1,54 @@
-
+import sys
 import RPi.GPIO as GPIO
-from delays.delay import*
+from threading import *
+from delays.delay import *
+from time import *
+
 GPIO.setwarnings(False)
 
 led1 = 17
 led2 = 27
-bt1 = 14
-bt2 = 15
 
-def my_callback1(self):
- GPIO.output(led1,not(GPIO.input(led1)))
 
-def my_callback2(self):
+def int1():
+ state =  not(GPIO.input(led1))
+ GPIO.output(led1,state)
+ Timer(1,int1).start()
+ 
+def int2():
  GPIO.output(led2,not(GPIO.input(led2)))
-
+ Timer(3,int2).start()
  
 def peripheral_setup():
  GPIO.setmode(GPIO.BCM)
  GPIO.setup(led1, GPIO.OUT)
  GPIO.setup(led2, GPIO.OUT)
- GPIO.setup(bt1, GPIO.IN, GPIO.PUD_DOWN)
- GPIO.setup(bt2, GPIO.IN, GPIO.PUD_UP)
- GPIO.add_event_detect(bt1,GPIO.FALLING,callback=my_callback1,bouncetime=300)
- GPIO.add_event_detect(bt2,GPIO.RISING,callback=my_callback2,bouncetime=300)
- 
+ Timer(1,int1).start()
+ Timer(3,int2).start()
+
 def peripheral_loop():
- print ("Mientras lees")
- delay(1.5)
- print ("puedes presionar")
- delay(1.5)
- print ("los botones que quieras")
- delay(1.5)
+ print("hola mundo")
+ delay(2)
+ #sleep(2)
 
 # Main function
 def main () :
+
 # Setup
+ print("hola mundosssssssssssss")
+
  peripheral_setup()
  try:
 # Infinite loop
   while 1 :
    peripheral_loop()
- except:
+ except : #RuntimeError :  
   print()
   print("Bye")
-  GPIO.cleanup()
+  Timer(1,int1)._stop() #_stop() #delete() #cancel()
+  Timer(1,int1).cancel() #_stop() #delete() #cancel()
+  Timer(1,int1)._delete() #_stop() #delete() #cancel()
+  sys.exit()
 
 main()
- 
+GPIO.cleanup()
