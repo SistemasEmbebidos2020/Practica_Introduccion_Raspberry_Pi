@@ -16,7 +16,7 @@ try:
    led.ChangeDutyCycle(t) # Para cambiar el ciclo de trabajo de 0 a 100
    t+=5
    sleep(0.2)
-while t > 0:
+  while t > 0:
    led.ChangeDutyCycle(t) # Para cambiar el ciclo de trabajo de 0 a 100
    t-=5
    sleep(0.2)
