@@ -28,8 +28,8 @@ def peripheral_setup():
 
 def peripheral_loop():
  print("hola mundo")
- delay(2)
- #sleep(2)
+ #delay(2)
+ sleep(2)
 
 # Main function
 def main () :
