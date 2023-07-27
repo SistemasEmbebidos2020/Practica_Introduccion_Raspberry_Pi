@@ -26,11 +26,14 @@ def peripheral_setup():
  
 def peripheral_loop():
  print ("Mientras lees")
- delay(1.5)
+ sleep(1.5)
+ #delay(1.5)
  print ("puedes presionar")
- delay(1.5)
+ sleep(1.5)
+ #delay(1.5)
  print ("los botones que quieras")
- delay(1.5)
+ sleep(1.5)
+ #delay(1.5)
 
 # Main function
 def main () :
