@@ -22,7 +22,7 @@ try:
    sleep(0.2)
 except Exception as e:
  print()
- print("Error:", e.__class__.__name__)
+ print("Error:", e.__class__)
  print("bye")
 except(KeyboardInterrupt):
  print()
