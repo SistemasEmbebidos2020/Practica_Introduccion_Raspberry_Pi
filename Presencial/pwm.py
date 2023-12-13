@@ -20,7 +20,14 @@ try:
    led.ChangeDutyCycle(t) # Para cambiar el ciclo de trabajo de 0 a 100
    t-=5
    sleep(0.2)
-except:
+except Exception as e:
  print()
- print("Bye")
- GPIO.cleanup()
+ print("Error:", e.__class__.__name__)
+ print("bye")
+except(KeyboardInterrupt):
+ print()
+ print("bye")
+ 
+GPIO.cleanup()
+ 
+
