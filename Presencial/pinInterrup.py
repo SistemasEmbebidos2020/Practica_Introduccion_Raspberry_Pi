@@ -43,10 +43,16 @@ def main () :
 # Infinite loop
   while 1 :
    peripheral_loop()
- except:
+ except Exception as e:
   print()
-  print("Bye")
-  GPIO.cleanup()
+  print("Error:", e.__class__.__name__)
+  print("bye")
+ except(KeyboardInterrupt):
+  print()
+  print("bye")
+ 
+ GPIO.cleanup()
+ 
 
 main()
  
