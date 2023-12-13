@@ -1,5 +1,6 @@
 
 import RPi.GPIO as GPIO
+from time import sleep
 from delays.delay import*
 GPIO.setwarnings(False)
 
